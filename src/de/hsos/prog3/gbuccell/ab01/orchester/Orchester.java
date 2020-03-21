@@ -17,7 +17,7 @@ public class Orchester implements Verhalten {
     private String bezeichnung;
     private String audioDateiKonzert = "/All_Together.wav";
     DirigentIn dirigentIn;
-    HashSet<MusikerIn> musikerInnen;
+    HashSet<MusikerIn> musikerInnen = null;
     Verhalten verhalten;
 
 //Konstruktor
@@ -36,8 +36,7 @@ public class Orchester implements Verhalten {
         return musikerInnen;
     }
     public URL getAudioDateiKonzert(){
-        URL url = App.class.getResource(audioDateiKonzert);
-        return url;
+        return App.class.getResource(audioDateiKonzert);
     }
     public void proben(Orchester orchester){
         orchester.verhalten = new Probe();

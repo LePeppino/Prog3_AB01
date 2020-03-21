@@ -14,4 +14,8 @@ public class DirigentIn extends Mitglied {
         super();
         this.stabLaenge = stabLaenge;
     }
+
+    public int getStabLaenge(){
+        return stabLaenge;
+    }
 }

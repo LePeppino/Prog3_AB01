@@ -57,7 +57,6 @@ public class App {
         DirigentIn djBobo = new DirigentIn("DJ Bobo", 20);
         orchester.addDirigentIn(djBobo);
 
-        //HashSet<MusikerIn> musikerInnen = new HashSet<>();
         MusikerIn saxophon = new MusikerIn("Sexy Sax Guy", SAXOPHON);
         MusikerIn schlagzeug = new MusikerIn("My loud neighbor TomTom", SCHLAGZEUG);
         MusikerIn akkordeon = new MusikerIn("The romanian", AKKORDEON);

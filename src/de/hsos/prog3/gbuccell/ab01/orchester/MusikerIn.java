@@ -8,7 +8,6 @@ package de.hsos.prog3.gbuccell.ab01.orchester;
 
 public class MusikerIn extends Mitglied {
 
-    private String name;
     private Instrument instrument;
 
     public MusikerIn(String name, Instrument instrument){
