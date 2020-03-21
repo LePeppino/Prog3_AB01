@@ -70,7 +70,7 @@ public class App {
         try{
             orchester.spielen(orchester);
         }catch(IOException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
     }
