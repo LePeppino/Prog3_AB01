@@ -18,7 +18,7 @@ public enum Instrument {
 // Konstruktor darf nicht public sein (UML sagt aber "public")
     private Instrument(String audiodatei){
         this.audiodatei = audiodatei;
-    };
+    }
 
     public String getAudio(){
         return audiodatei;
