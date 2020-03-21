@@ -1,3 +1,9 @@
+/*
+ * Modul: Programmieren 3, AB01
+ * Autor: Giuseppe Buccellato
+ * Semester: SoSe2020
+ */
+
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
 import de.hsos.prog3.gbuccell.ab01.App;
@@ -9,7 +15,7 @@ public enum Instrument {
 
     private String audiodatei = null;
 
-
+// Konstruktor darf nicht public sein (UML sagt aber "public")
     private Instrument(String audiodatei){
         this.audiodatei = audiodatei;
     };

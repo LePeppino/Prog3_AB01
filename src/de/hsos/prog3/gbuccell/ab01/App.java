@@ -1,3 +1,9 @@
+/*
+* Modul: Programmieren 3, AB01
+* Autor: Giuseppe Buccellato
+* Semester: SoSe2020
+*/
+
 package de.hsos.prog3.gbuccell.ab01;
 //import de.hsos.prog3.audio.SimpleAudioPlayer;
 import de.hsos.prog3.gbuccell.ab01.audio.adapter.SimpleAudioPlayerAdapter;
