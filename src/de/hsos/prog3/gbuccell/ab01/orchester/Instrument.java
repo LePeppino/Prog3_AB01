@@ -22,3 +22,22 @@ public enum Instrument {
         return audiodatei;
     }
 }
+
+/* Zweite Methode laut VL-Skript:
+public class Instrument{
+    public static final Instrument SAXOPHON = new Instrument("/Baritone.wav");
+    public static final Instrument SCHLAGZEUG = new Instrument("/Drum.wav");
+    public static final Instrument AKKORDEON = new Instrument("/Akkordeon.wav");
+
+    private String audiodatei;
+
+    Instrument(String audiodatei) {
+        this.audiodatei = audiodatei;
+    }
+
+    public String getAudio(){
+        return audiodatei;
+    }
+}
+
+ */

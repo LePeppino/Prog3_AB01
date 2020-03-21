@@ -60,17 +60,14 @@ public class App {
         MusikerIn saxophon = new MusikerIn("Sexy Sax Guy", SAXOPHON);
         MusikerIn schlagzeug = new MusikerIn("My loud neighbor TomTom", SCHLAGZEUG);
         MusikerIn akkordeon = new MusikerIn("The romanian", AKKORDEON);
-        orchester.addMusikerIn(saxophon);
+        orchester.addMusikerIn(saxophon); // NULLPOINTER EXCEPTION, wenn nicht initialisiert
         orchester.addMusikerIn(schlagzeug);
         orchester.addMusikerIn(akkordeon);
 
+    //moegliche Verhaltensweisen
         orchester.proben(orchester);
         orchester.auftreten(orchester);
-        try{
-            orchester.spielen(orchester);
-        }catch(IOException e){
-            System.out.println(e.getMessage());
-        }
-
+    //Spiel mir ein Lied
+        orchester.spielen(orchester);
     }
 }

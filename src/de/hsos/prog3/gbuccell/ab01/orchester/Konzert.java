@@ -6,6 +6,7 @@
 
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
+import de.hsos.prog3.gbuccell.ab01.App;
 import de.hsos.prog3.gbuccell.ab01.audio.adapter.SimpleAudioPlayerAdapter;
 
 import java.io.IOException;
@@ -22,7 +23,10 @@ public class Konzert implements Verhalten {
     @Override
     public void spielen(Orchester orchester) throws IOException {
         SimpleAudioPlayerAdapter adapter = new SimpleAudioPlayerAdapter();
-        adapter.einmaligAbspielen(getKonzertSound(orchester));
-        throw new IOException("Auftritt wird abgebrochen");
+        try {
+            adapter.einmaligAbspielen(getKonzertSound(orchester));
+        }catch(IOException e){
+            System.out.println("Auftritt wird abgebrochen");
+        }
     }
 }

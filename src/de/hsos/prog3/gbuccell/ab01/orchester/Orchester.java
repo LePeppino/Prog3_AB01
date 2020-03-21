@@ -17,12 +17,23 @@ public class Orchester implements Verhalten {
     private String bezeichnung;
     private String audioDateiKonzert = "/All_Together.wav";
     DirigentIn dirigentIn;
-    HashSet<MusikerIn> musikerInnen = null;
+    HashSet<MusikerIn> musikerInnen;
     Verhalten verhalten;
 
 //Konstruktor
     public Orchester(String bezeichnung, String audioDateiKonzert){
+        setBezeichnung(bezeichnung);
+        setAudioDateiKonzert(audioDateiKonzert);
+        this.musikerInnen = new HashSet<MusikerIn>(); //HashSet initialisieren, sonst Nullpointer!
+    }
+//Setter & Getter
+    private void setBezeichnung(String bezeichnung){
         this.bezeichnung = bezeichnung;
+    }
+    public String getBezeichnung(){
+        return bezeichnung;
+    }
+    private void setAudioDateiKonzert(String audioDateiKonzert){
         this.audioDateiKonzert = audioDateiKonzert;
     }
 //Methoden

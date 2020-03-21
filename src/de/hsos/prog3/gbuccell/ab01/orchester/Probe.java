@@ -7,6 +7,7 @@
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
 import de.hsos.prog3.gbuccell.ab01.App;
+import de.hsos.prog3.gbuccell.ab01.audio.StdAudioPlayer;
 import de.hsos.prog3.gbuccell.ab01.audio.adapter.SimpleAudioPlayerAdapter;
 
 import java.io.IOException;
@@ -22,11 +23,15 @@ public class Probe implements Verhalten {
     * */
     @Override
     public void spielen(Orchester orchester) throws IOException {
-        for (MusikerIn musikerIn : orchester.musikerInnen) {
-            SimpleAudioPlayerAdapter adapter = new SimpleAudioPlayerAdapter();
-            URL url = App.class.getResource(musikerIn.getInstrument().getAudio());
-            adapter.einmaligAbspielen(url);
+        StdAudioPlayer adapter = new SimpleAudioPlayerAdapter();
+        for (MusikerIn musikerIn : orchester.getMusikerInnen()) {
+            try {
+                URL url = App.class.getResource(musikerIn.getInstrument().getAudio());
+                adapter.einmaligAbspielen(url);
+            }catch(IOException e){
+                System.out.println("Probe wird abgebrochen");
+                break; //break aus dem Loop
+            }
         }
-        throw new IOException("Probe wird abgebrochen");
     }
 }
