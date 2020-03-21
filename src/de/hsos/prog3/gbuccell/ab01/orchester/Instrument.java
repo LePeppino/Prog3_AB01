@@ -6,17 +6,15 @@
 
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
-import de.hsos.prog3.gbuccell.ab01.App;
-
 public enum Instrument {
     SAXOPHON("/Baritone.wav"),
     SCHLAGZEUG("/Drum.wav"),
     AKKORDEON("/Accordion.wav");
 
-    private String audiodatei = null;
+    private String audiodatei;
 
 // Konstruktor darf nicht public sein (UML sagt aber "public")
-    private Instrument(String audiodatei){
+    Instrument(String audiodatei) {
         this.audiodatei = audiodatei;
     }
 

@@ -6,43 +6,47 @@
 
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
+import de.hsos.prog3.gbuccell.ab01.App;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashSet;
 
-public class Orchester {
+public class Orchester implements Verhalten {
 
-    private String bezeichnung = null;
-    private String audioDateiKonzert = null;
+    private String bezeichnung;
+    private String audioDateiKonzert = "/All_Together.wav";
+    DirigentIn dirigentIn;
+    HashSet<MusikerIn> musikerInnen;
+    Verhalten verhalten;
 
+//Konstruktor
     public Orchester(String bezeichnung, String audioDateiKonzert){
         this.bezeichnung = bezeichnung;
-        this. audioDateiKonzert = audioDateiKonzert;
-        HashSet<MusikerIn> musikerInnen = new HashSet<>();
-        addDirigentIn();
-        addMusikerIn();
+        this.audioDateiKonzert = audioDateiKonzert;
     }
-
-    public void addDirigentIn(){
-
+//Methoden
+    public void addDirigentIn(DirigentIn dirigentIn){
+        this.dirigentIn = dirigentIn;
     }
-    public void addMusikerIn(){
-
+    public void addMusikerIn(MusikerIn musikerIn){
+        musikerInnen.add(musikerIn);
     }
-    /*
     public HashSet<MusikerIn> getMusikerInnen(){
-        //return ;
-    }
-    public void proben(){
-
-    }
-    public void auftreten(){
-
-    }
-    public void spielen(){
-
+        return musikerInnen;
     }
     public URL getAudioDateiKonzert(){
-        //return ;
+        URL url = App.class.getResource(audioDateiKonzert);
+        return url;
     }
-    */
+    public void proben(Orchester orchester){
+        orchester.verhalten = new Probe();
+    }
+    public void auftreten(Orchester orchester){
+        orchester.verhalten = new Konzert();
+    }
+    @Override
+    public void spielen(Orchester orchester) throws IOException{
+        verhalten.spielen(orchester);
+    }
 }
