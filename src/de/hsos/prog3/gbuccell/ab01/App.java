@@ -20,7 +20,6 @@ import static de.hsos.prog3.gbuccell.ab01.orchester.Instrument.*;
 
 public class App {
     public static void main(String[] args) throws IOException {
-        /*
     //Nachbar Verwaltung
         HashSet<Nachbar> nachbarVW = new HashSet<>();
         nachbarVW.add(new Nachbar("Eric", "Walter"));
@@ -32,23 +31,18 @@ public class App {
             System.out.print( ", " + n.toString());
         }
         System.out.print("!\n");
-        */
 
-        /*
     //SimpleAudioPlayer aus Aufgabe 1.2.5
         URL url = App.class.getResource("/Accordion.wav");
         SimpleAudioPlayer player = new SimpleAudioPlayer(url);
         player.setDebug(false);
         player.verboseLogging(true);
         player.play(0);
-        */
 
-        /*
     //An Adapter angepasster SimpleAudioPlayer
         SimpleAudioPlayerAdapter adapter = new SimpleAudioPlayerAdapter();
-        URL url = App.class.getResource("/Accordion.wav");
-        adapter.einmaligAbspielen(url);
-        */
+        URL url2 = App.class.getResource("/Baritone.wav");
+        adapter.einmaligAbspielen(url2);
 
     //Aufgabe 1.4.8
         String audioDatei = "/All_Together.wav";
