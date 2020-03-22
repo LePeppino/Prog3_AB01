@@ -66,8 +66,9 @@ public class App {
 
     //moegliche Verhaltensweisen
         orchester.proben(orchester);
+        orchester.spielen(orchester);
+
         orchester.auftreten(orchester);
-    //Spiel mir ein Lied
         orchester.spielen(orchester);
     }
 }

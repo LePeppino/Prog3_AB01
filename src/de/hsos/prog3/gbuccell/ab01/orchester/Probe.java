@@ -4,7 +4,9 @@
  * Semester: SoSe2020
  */
 
+/* DIESE KLASSE WURDE ALS INNERE KLASSE IN 'ORCHESTER' IMPLEMENTIERT
 package de.hsos.prog3.gbuccell.ab01.orchester;
+
 
 import de.hsos.prog3.gbuccell.ab01.App;
 import de.hsos.prog3.gbuccell.ab01.audio.StdAudioPlayer;
@@ -20,7 +22,7 @@ public class Probe implements Verhalten {
     * -> neuen Adapter erstellen,
     * -> url = Audio des Instruments der MusikerIn,
     * -> nacheinander einmalig abspielen
-    * */
+    *
     @Override
     public void spielen(Orchester orchester) throws IOException {
         StdAudioPlayer adapter = new SimpleAudioPlayerAdapter();
@@ -35,3 +37,4 @@ public class Probe implements Verhalten {
         }
     }
 }
+*/

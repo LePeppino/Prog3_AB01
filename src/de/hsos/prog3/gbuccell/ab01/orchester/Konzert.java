@@ -4,6 +4,7 @@
  * Semester: SoSe2020
  */
 
+/* DIESE KLASSE WURDE ALS INNERE KLASSE IN 'ORCHESTER' IMPLEMENTIERT
 package de.hsos.prog3.gbuccell.ab01.orchester;
 
 import de.hsos.prog3.gbuccell.ab01.App;
@@ -29,4 +30,4 @@ public class Konzert implements Verhalten {
             System.out.println("Auftritt wird abgebrochen");
         }
     }
-}
+}*/
